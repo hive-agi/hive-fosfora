@@ -1,0 +1,5 @@
+{:project-id  "hive-fosfora"
+ :description "IAddon that live-codes a running Fosfora (VJ/visuals app) over its web-remote WebSocket: MCP tools plus a REPL namespace, from outside Fosfora."
+ :type        :library
+ :parent      "hive"
+ :carto       {:source-roots ["dev" "resources" "src" "test"]}}
