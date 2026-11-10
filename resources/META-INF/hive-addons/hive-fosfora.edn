@@ -11,5 +11,5 @@
  :addon/placement    {:requires #{:display}}
  :addon/description  "Fosfora live control over its web-remote WebSocket: read state and audio, set params, load effects and presets, fire triggers, feed the binding bus."
  :addon/license      "MIT"
- :addon/maturity     :alpha
+ :addon/maturity     :experimental
  :addon/trust-class  :foss}

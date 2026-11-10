@@ -20,7 +20,9 @@
 
 (deftest the-manifest-declares-where-it-may-run
   (is (= {:requires #{:display}} (:addon/placement (manifest)))
-      "it drives an app on the operator's screen, so it runs where the display is"))
+      "it drives an app on the operator's screen, so it runs where the display is")
+  (is (contains? #{:beta :dormant :experimental :stable} (:addon/maturity (manifest)))
+      "hive-mcp's manifest schema refuses any other maturity"))
 
 (deftest lifecycle-is-idempotent-and-never-needs-fosfora-running
   (let [port (with-open [s (ServerSocket. 0 1 (InetAddress/getLoopbackAddress))] (.getLocalPort s))
