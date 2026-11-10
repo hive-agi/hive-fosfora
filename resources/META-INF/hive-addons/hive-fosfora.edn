@@ -8,6 +8,7 @@
  :addon/capabilities #{:tools :health-reporting}
  :addon/dependencies #{}
  :addon/lifecycle    {:policy :lazy :idle-ms 900000}
+ :addon/placement    {:requires #{:display}}
  :addon/description  "Fosfora live control over its web-remote WebSocket: read state and audio, set params, load effects and presets, fire triggers, feed the binding bus."
  :addon/license      "MIT"
  :addon/maturity     :alpha

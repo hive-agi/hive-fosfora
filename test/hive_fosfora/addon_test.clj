@@ -18,6 +18,10 @@
     (is (= (:addon/type m) (addon/addon-type a)))
     (is (= (:addon/capabilities m) (addon/capabilities a)))))
 
+(deftest the-manifest-declares-where-it-may-run
+  (is (= {:requires #{:display}} (:addon/placement (manifest)))
+      "it drives an app on the operator's screen, so it runs where the display is"))
+
 (deftest lifecycle-is-idempotent-and-never-needs-fosfora-running
   (let [port (with-open [s (ServerSocket. 0 1 (InetAddress/getLoopbackAddress))] (.getLocalPort s))
         a (sut/addon-ctor {})]
